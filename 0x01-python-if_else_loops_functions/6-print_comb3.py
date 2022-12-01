@@ -4,4 +4,4 @@ for i in range(0, 10):
         print(f"{i}{n}",end="")
         if i != 8 or n != 9:
             print(f", ", end="")
-print("\n")
+print(f"\n")
