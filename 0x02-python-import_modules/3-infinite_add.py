@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+if __name__ == "__main__":
+    import sys
+    i = len(sys.argv)
+    x = 1
+    if i == 1:
+        print(f"0")
+        sys.exit()
+    while (x < i):
+        sum = 0
+        for n in range(1, i):
+            sum += int(sys.argv[n])
+        x += 1
+    print(f"{sum}")
