@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+if __name__ == "__main__":
+    import sys
+    import calculator_1 as calc
+    if len(sys.argv) != 4:
+        print(f"Usage: {sys.argv[0]} <a> <operator> <b>")
+        sys.exit(1)
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    arg_op = sys.argv[2]
+    if arg_op == "+":
+        result = calc.add(a, b)
+    elif arg_op == "-":
+        result = calc.sub(a, b)
+    elif arg_op == "*":
+        result = calc.mul(a, b)
+    elif arg_op == "/":
+        result = calc.div(a, b)
+    else:
+        print(f"Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+    print(f"{a} {arg_op} {b} = {result}")
