@@ -17,6 +17,7 @@ class Square():
         """
         self.size = size
         self.position = position
+
     @property
     def size(self):
         """Returns size"""
@@ -26,6 +27,7 @@ class Square():
     def position(self):
         """Returns position"""
         return self.__position
+
     @size.setter
     def size(self, value):
         if type(value) != int:
@@ -45,6 +47,7 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
+
     def area(self):
         """Returns area of square"""
         return self.__size**2
