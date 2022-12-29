@@ -1,12 +1,19 @@
 #!/usr/bin/python3
-import math
 """This module defines a MagicClass class"""
+
+import math
 
 
 class MagicClass():
     """This class defines a MagicClass"""
     def __init__(self, radius=0):
-        """Initialize class"""
+        """Initialize class
+        Args:
+            radius: First parameter
+
+        Raises:
+            TypeError: radius must be a number
+        """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
