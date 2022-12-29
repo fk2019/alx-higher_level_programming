@@ -35,30 +35,24 @@ class Square(object):
 
     def __lt__(self, other):
         assert isinstance(other, Square)
-        if self.area() < other.area():
-            return True
+        return self.size < other.size
 
     def __le__(self, other):
         assert isinstance(other, Square)
-        if self.area() <= other.area():
-            return True
+        return self.size <= other.size
 
     def __eq__(self, other):
         assert isinstance(other, Square)
-        if self.area() == other.area():
-            return True
+        return self.size == other.size
 
     def __ne__(self, other):
         assert isinstance(other, Square)
-        if self.area() != other.area():
-            return True
+        return self.size != other.size
 
     def __gt__(self, other):
         assert isinstance(other, Square)
-        if self.area() > other.area():
-            return True
+        return self.size > other.size
 
     def __ge__(self, other):
         assert isinstance(other, Square)
-        if self.area() >= other.area():
-            return True
+        return self.size >= other.size
