@@ -69,5 +69,5 @@ class Rectangle():
     def __repr__(self):
         w = str(self.__width)
         h = str(self.__height)
-        res = "Rectangle(" + w + ", " + h +")"
+        res = "Rectangle(" + w + ", " + h + ")"
         return res
