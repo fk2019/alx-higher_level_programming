@@ -67,4 +67,4 @@ class Rectangle():
             return str
 
     def __repr__(self):
-        return f'({self.__width}, {self.__height})'
+        return f'({str(self.__width)}, {str(self.__height)})'
