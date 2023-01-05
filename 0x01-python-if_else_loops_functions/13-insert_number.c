@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * add_nodeint - adds a new node at the beginning of a listint_t list
  * @head: pointer to a pointer of the start of the list
@@ -38,6 +38,7 @@ listint_t *insert_node(listint_t **head, int number)
                 (*head) = current;
                 return (*head);
         }
+
         while (current->next != NULL)
         {
                 current = current->next;

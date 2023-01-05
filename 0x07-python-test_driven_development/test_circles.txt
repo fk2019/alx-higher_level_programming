@@ -1,0 +1,34 @@
+=====================
+How to use circles.py
+=====================
+This library has only one function
+``circle_area``.
+Test areas with radius >= 0
+    >>> from circles import circle_area
+    >>> circle_area(1)
+    3.141592653589793
+
+    >>> circle_area(0)
+    0.0
+
+    >>> circle_area(2.1)
+    13.854423602330987
+
+Raise ValueError on negative radius
+    >>> circle_area(-2)
+    Traceback (most recent call last):
+    ValueError: radius must be a positive number
+
+Raise TypeError
+
+    >>> circle_area(True)
+    Traceback (most recent call last):
+    TypeError: radius must a non-negative real number
+
+    >>> circle_area("Hello")
+    Traceback (most recent call last):
+    TypeError: radius must a non-negative real number
+
+    >>> circle_area(3 + 5j)
+    Traceback (most recent call last):
+    TypeError: radius must a non-negative real number
