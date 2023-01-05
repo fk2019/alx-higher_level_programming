@@ -1,0 +1,25 @@
+======================
+How to use add_integer
+======================
+
+This module contains one function ``add_integer``
+that adds two integers a and b
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(5, 9)
+    14
+
+It also works on floats
+
+    >>> add_integer(7.4, 2.6)
+    9
+
+It raise TypeError on non-integer values
+
+    >>> add_integer(5+5j, 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, "t")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
