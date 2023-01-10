@@ -1,0 +1,29 @@
+=============================
+How to use text_indentation()
+=============================
+This file contains one function ``text_indentation()``
+Example usage:
+
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+        >>> text_indentation("""Lorem ipsum. Quonam modo? hoc: igitur ne""")
+	Lorem ipsum.
+        <BLANKLINE>
+        Quonam modo?
+        <BLANKLINE>
+        hoc:
+        <BLANKLINE>
+        igitur ne
+
+Text must be a string
+
+     >>> text_indentation(55)
+     Traceback (most recent call last):
+     TypeError: text must be a string
+
+     >>> text_indentation()
+     Traceback (most recent call last):
+     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+     >>> text_indentation("""Lorem: ipsum. quaue?""", """I am ruinas vidires?""")
+     Traceback (most recent call last):
+     TypeError: text_indentation() takes 1 positional argument but 2 were given
