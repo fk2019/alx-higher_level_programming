@@ -10,12 +10,10 @@ class Square(Rectangle):
     """This class inherits from Rectangle class"""
     def __init__(self, size):
         """Initialize the class"""
-        self.__size = size
         super().__init__(self.__size, self.__size)
         self.integer_validator("size", self.__size)
-        self.area()
+        self.__size = size
 
     def __str__(self):
         """Return string"""
-        return ("[Rectangle] {}/{}".format(type(self).__name__,
-                                           self.__size, self.__size))
+        return ("[Rectangle] {}/{}".format(self.__size, self.__size))
