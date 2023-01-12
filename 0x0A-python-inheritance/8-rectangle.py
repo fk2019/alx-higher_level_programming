@@ -3,7 +3,7 @@
 """
 
 
-class BaseGeometry():
+class BaseGeometry(object):
     """This class raises an Exception"""
     def area(self):
         """Raise Exception"""
