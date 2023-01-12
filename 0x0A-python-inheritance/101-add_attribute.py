@@ -5,6 +5,7 @@
 
 def add_attribute(obj, attr, value):
     """Returns object with new attribute"""
-    if type(obj) == type(attr):
+    if hasattr(obj, "__dict__"):
+        setattr(obj, attr, value)
+    else:
         raise TypeError("can't add new attribute")
-    setattr(obj, attr, value)
