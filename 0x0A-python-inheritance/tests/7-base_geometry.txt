@@ -1,0 +1,45 @@
+=============================
+How to use BaseGeometry class
+=============================
+This file contains one class ``BaseGeometry``
+Example usage
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", 12)
+
+Raise Exception for area(self)
+        >>> bg.area()
+        Traceback (most recent call last):
+        Exception: area() is not implemented
+
+Value must be an integer
+      >>> bg.integer_validator("name", "Kaido")
+      Traceback (most recent call last):
+      TypeError: name must be an integer
+
+      >>> bg.integer_validator("model", 4.5)
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
+Value must be > 0
+      >>> bg.integer_validator("price", 0)
+      Traceback (most recent call last):
+      ValueError: price must be greater than 0
+
+      >>> bg.integer_validator("distance", -6)
+      Traceback (most recent call last):
+      ValueError: distance must be greater than 0
+
+Check for excess input
+      >>> bg.integer_validator("swords", 1, 2, 3)
+      Traceback (most recent call last):
+      TypeError: integer_validator() takes 3 positional arguments but 5 were given
+
+Check for missing input
+      >>> bg.integer_validator("members")
+      Traceback (most recent call last):
+      TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+      >>> bg.integer_validator()
+      Traceback (most recent call last):
+      TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
