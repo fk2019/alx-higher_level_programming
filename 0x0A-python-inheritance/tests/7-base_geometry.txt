@@ -21,6 +21,26 @@ Value must be an integer
       Traceback (most recent call last):
       TypeError: model must be an integer
 
+      >>> bg.integer_validator("model", True)
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
+      >>> bg.integer_validator("model", None)
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
+      >>> bg.integer_validator("model", [1])
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
+      >>> bg.integer_validator("model", {2, 4})
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
+      >>> bg.integer_validator("model", (2,))
+      Traceback (most recent call last):
+      TypeError: model must be an integer
+
 Value must be > 0
       >>> bg.integer_validator("price", 0)
       Traceback (most recent call last):
