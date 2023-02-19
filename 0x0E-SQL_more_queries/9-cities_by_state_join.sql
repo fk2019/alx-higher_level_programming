@@ -3,5 +3,5 @@
 -- results sorted in ascending order
 SELECT cities.id, cities.name
 FROM cities INNER JOIN states
-ON cities.id = states.id
+ON cities.state_id = states.id
 ORDER BY cities.id;
