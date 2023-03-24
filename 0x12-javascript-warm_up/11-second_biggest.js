@@ -8,7 +8,9 @@ function secondBiggest (args) {
     const array = [];
     for (let i = 2; i < args.length; i++) {
       array.push(args[i]);
-      array.sort();
+      array.sort((a, b) => {
+        return (a - b);
+      });
     }
     console.log(array[array.length - 2]);
   }
