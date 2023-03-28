@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Get all states"""
+"""Get all states starting with N: Use BINARY to enable case
+   sensitivity
+"""
 
 
 if __name__ == "__main__":
@@ -12,7 +14,8 @@ if __name__ == "__main__":
                            passwd=password, db=database, charset="utf8")
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY id ASC")
+        "SELECT * FROM states WHERE BINARY states.name LIKE 'N%' \
+        ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
