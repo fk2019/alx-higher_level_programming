@@ -14,7 +14,7 @@ if __name__ == "__main__":
                            passwd=password, db=database, charset="utf8")
     cur = conn.cursor()
     qry = """
-    SELECT * FROM states WHERE states.name = '{user_input}'
+    SELECT * FROM states WHERE BINARY states.name = '{user_input}'
     ORDER BY id ASC
     """
     qry = qry.format(user_input=user_input)
