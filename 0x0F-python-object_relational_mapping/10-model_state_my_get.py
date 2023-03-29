@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session(engine)
     state = session.query(State).filter(
-        func.binary(State.name) == \sys.argv[4]).order_by(State.id).first()
+        func.binary(State.name) == sys.argv[4]).order_by(State.id).first()
     if state:
         print("{}".format(state.id))
     else:
