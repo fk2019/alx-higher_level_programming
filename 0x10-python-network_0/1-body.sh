@@ -1,3 +1,3 @@
 #!/bin/bash
 # send GET request and display body
-curl -sXL GET "$1" 200
+curl -sX GET "$1" -L 200
