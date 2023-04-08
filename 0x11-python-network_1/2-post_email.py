@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Send POST request to provided URL
 """
 from urllib import request, parse
