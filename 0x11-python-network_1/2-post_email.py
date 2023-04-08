@@ -25,8 +25,8 @@ def post():
         elif hasattr(e, 'code'):
             print('The server couldn\'t fulfill the request.')
             print('Error code: ', e.code)
-        else:
-            print(body)
+    else:
+        print(body)
 
 
 if __name__ == "__main__":
