@@ -20,8 +20,9 @@ def github_commits():
         new = commits[-10:]
         for i in new:
             print(f"{i['sha']}: {i['commit']['author']['name']}")
-    except:
+    except TypeError:
         pass
+
 
 if __name__ == "__main__":
     github_commits()
