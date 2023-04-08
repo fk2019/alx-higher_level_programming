@@ -18,7 +18,7 @@ def json_api():
         if (json == {}):
             print("No result")
         else:
-            print(f"[{json.get(id)}] {json.get(name)}")
+            print(f"[{json.get('id')}] {json.get('name')}")
     except ValueError:
         print("Not a valid JSON")
 
