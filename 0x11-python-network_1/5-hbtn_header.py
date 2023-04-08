@@ -12,7 +12,7 @@ def header():
     url = sys.argv[1]
     req = requests.get(url, auth=('user', 'pass'))
     head = req.headers
-    if (head['X-Request-Id']):
+    if (len(head['X-Request-Id']) > 1):
         x_req_id = head['X-Request-Id']
         print(x_req_id)
 
