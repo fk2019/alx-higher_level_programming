@@ -12,8 +12,9 @@ def header():
     url = sys.argv[1]
     req = requests.get(url, auth=('user', 'pass'))
     head = req.headers
-    x_req_id = head['X-Request-Id']
-    print(x_req_id)
+    if (head['X-Request-Id']):
+        x_req_id = head['X-Request-Id']
+        print(x_req_id)
 
 
 if __name__ == "__main__":
